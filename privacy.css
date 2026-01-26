@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e8f5e9, #f1f8e9); /* light greenish gradient */
+  color: #1b1b1b; /* darker text for contrast on light background */
+  line-height: 1.6;
+}
+
+/* ===== Privacy Container ===== */
+.privacy-container {
+  max-width: 800px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.95); /* light semi-transparent card */
+  padding: 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Main Heading ===== */
+h1 {
+  font-size: 2.5rem;
+  color: #2e7d32; /* deep green for headings */
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ===== Section Headings ===== */
+h2 {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  color: #388e3c; /* medium green */
+  border-left: 4px solid #66bb6a;
+  padding-left: 12px;
+}
+
+/* ===== Lists ===== */
+ul {
+  margin-left: 20px;
+  padding-left: 15px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 0.98rem;
+}
+
+/* ===== Links ===== */
+a {
+  color: #2e7d32;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #43a047;
+}
+
+/* ===== Responsive Fixes ===== */
+@media (max-width: 600px) {
+  .privacy-container {
+    margin: 20px;
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}

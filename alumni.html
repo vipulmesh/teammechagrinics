@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Alumni - Team Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f8f4;
+      margin: 0;
+      padding: 0;
+    }
+    .team-heading {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 40px 0 30px 0;
+      color: #388e3c;
+      letter-spacing: 2px;
+    }
+    .outer-team-container {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 24px;
+      margin: 48px auto 60px auto;
+      max-width: 1200px;
+      box-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+    }
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-items: center;
+    }
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(56, 142, 60, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      overflow: hidden;
+    }
+    .team-member:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 24px rgba(56, 142, 60, 0.18);
+    }
+    .member-photo-section {
+      width: 100%;
+      height: 220px;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+    .member-photo {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+    .member-photo:hover {
+      transform: scale(1.1);
+    }
+    .member-info-section {
+      width: 100%;
+      padding: 24px 16px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+    .member-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .member-position {
+      font-size: 1.1rem;
+      color: #388e3c;
+      text-align: center;
+      font-weight: 600;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .team-member {
+        width: 240px;
+      }
+      .member-photo {
+        width: 140px;
+        height: 140px;
+      }
+      .member-photo-section {
+        height: 180px;
+        padding: 20px;
+      }
+    }
+    @media (max-width: 600px) {
+      .team-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .team-member {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+ <header class="bg-white/85 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <a href="index.html" class="flex items-center space-x-2">
+      <span class="text-2xl font-extrabold text-green-800 tracking-tight">
+        Team MechAgrinics
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center space-x-4">
+      <a href="index.html#hero" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">About Us</a>
+      <a href="teampg.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Our Team</a>
+      
+      <div class="relative group">
+        <a href="projects.html" class="text-stone-600 group-hover:text-green-700 px-3 py-2 font-medium flex items-center">
+          Projects <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+        <div class="absolute hidden group-hover:block bg-white border border-stone-100 shadow-xl rounded-xl mt-1 w-64 overflow-hidden">
+          <a href="prj1.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Multi-Vegetable Transplanter 🌱</a>
+          <a href="prj2.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Onion Harvester (Soon)</a>
+        </div>
+      </div>
+
+      <a href="achievements.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Achievements</a>
+      <a href="alumni.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Alumni</a>
+      
+      <a href="contact.html" class="ml-2 bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg">
+        Get In Touch
+      </a>
+    </nav>
+
+    <button id="mobile-menu-button" class="lg:hidden text-stone-600 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-6 py-6 space-y-4 shadow-2xl">
+    <a href="index.html#hero" class="block text-stone-600 font-medium text-lg">About Us</a>
+    <a href="teampg.html" class="block text-stone-600 font-medium text-lg">Our Team</a>
+    <a href="projects.html" class="block text-stone-600 font-medium text-lg border-l-4 border-green-600 pl-3">Projects</a>
+    <div class="pl-6 space-y-2">
+      <a href="prj1.html" class="block text-stone-500 text-sm italic">Multi-Vegetable Transplanter</a>
+      <a href="prj2.html" class="block text-stone-500 text-sm italic">Onion Harvester</a>
+    </div>
+    <a href="achievements.html" class="block text-stone-600 font-medium text-lg">Achievements</a>
+    <a href="alumni.html" class="block text-stone-600 font-medium text-lg">Alumni</a>
+    <a href="contact.html" class="block bg-green-700 text-white text-center px-5 py-3 rounded-xl font-bold">
+      Get In Touch
+    </a>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>
+   <div style="background: #2e7d32; padding: 24px 0; border-radius: 18px; margin: 32px auto 24px auto; max-width: 2000px;">
+        <h1 class="team-heading" style="color: #e6f4e6 ; margin: 0;">Our Alumni</h1>
+        
+        <!-- Batch 2020 -->
+        <div class="outer-team-container">
+            <h2 style="text-align:center; color:#388e3c; margin-bottom:32px; font-size:2rem;">Batch-2020</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Shivam Nikhade.png" alt="Member 1" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Shivam Nikhade</b></div>
+                        <div class="member-position" style="color: red;">Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Kshitij Meher.png" alt="Member 2" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Kshitij Meher</b></div>
+                        <div class="member-position" style="color: red;">Vice-Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Animesh Gunaki.png" alt="Member 3" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Animesh Gunaki</b></div>
+                        <div class="member-position" style="color: red;">Technical Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Gaurav Shinde.png" alt="Member 4" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Gaurav Shinde</b></div>
+                        <div class="member-position" style="color: red;">Manufacturing Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Kundan Bonde.png" alt="Member 5" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Kundan Bonde</b></div>
+                        <div class="member-position" style="color: red;">Finance Head</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Batch 2021 -->
+        <div class="outer-team-container">
+            <h2 style="text-align:center; color:#388e3c; margin-bottom:32px; font-size:2rem;">Batch-2021</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Harshal Shinde.png" alt="Member 1" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Harshal Shinde</b></div>
+                        <div class="member-position" style="color: red;">Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Vishvajeet Fartade.png" alt="Member 2" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Vishvajeet Fartade</b></div>
+                        <div class="member-position" style="color: red;">Vice-Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Aniket Ghule.png" alt="Member 3" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Aniket Ghule</b></div>
+                        <div class="member-position" style="color: red;">Technical Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Anirudh Zulale.png" alt="Member 4" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Anirudh Zulale</b></div>
+                        <div class="member-position" style="color: red;">Manufacturing Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Gaurav Patil.png" alt="Member 5" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Gaurav Patil</b></div>
+                        <div class="member-position" style="color: red;">Finance Head</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Batch 2022 -->
+        <div class="outer-team-container">
+            <h2 style="text-align:center; color:#388e3c; margin-bottom:32px; font-size:2rem;">Batch-2022</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Darshan Magare.png" alt="Member 1" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Darshan Magare</b></div>
+                        <div class="member-position" style="color: red;">Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Pratik Chaudhari.png" alt="Member 2" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Pratik Chaudhari</b></div>
+                        <div class="member-position" style="color: red;">Vice-Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Tejas Babar.png" alt="Member 3" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Tejas Babar</b></div>
+                        <div class="member-position" style="color: red;">Technical Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Gaurav Patil.png" alt="Member 4" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Gaurav Patil</b></div>
+                        <div class="member-position" style="color: red;">Manufacturing Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Shubham Shrimangle.png" alt="Member 5" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Shubham Shrimangle</b></div>
+                        <div class="member-position" style="color: red;">Finance Head</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Batch 2023 -->
+        <div class="outer-team-container">
+            <h2 style="text-align:center; color:#388e3c; margin-bottom:32px; font-size:2rem;">Batch-2023</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Tejas Babar.png" alt="Member 1" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Tejas Babar</b></div>
+                        <div class="member-position" style="color: red;">Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Shubham Shrimangle.png" alt="Member 2" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Shubham Shrimangle</b></div>
+                        <div class="member-position" style="color: red;">Vice-Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Aditya Dhanshetti.png" alt="Member 3" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Aditya Dhanshetti</b></div>
+                        <div class="member-position" style="color: red;">Technical Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Sanket Rathod.png" alt="Member 4" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Sanket Rathod</b></div>
+                        <div class="member-position" style="color: red;">Manufacturing Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Aniket Mali.png" alt="Member 5" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Aniket Mali</b></div>
+                        <div class="member-position" style="color: red;">Finance Head</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Batch 2024 -->
+        <div class="outer-team-container">
+            <h2 style="text-align:center; color:#388e3c; margin-bottom:32px; font-size:2rem;">Batch-2024</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Prasad Giri.png" alt="Member 1" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Prasad Giri</b></div>
+                        <div class="member-position" style="color: red;">Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Parth Kotgire.png" alt="Member 2" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Parth Kotgire</b></div>
+                        <div class="member-position" style="color: red;">Vice-Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Kaustub Mahajan.png" alt="Member 3" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Kaustub Mahajan</b></div>
+                        <div class="member-position" style="color: red;">Technical Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Yash Kapse.png" alt="Member 4" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Yash Kapse</b></div>
+                        <div class="member-position" style="color: red;">Manufacturing Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Prasad Nagargoje.png" alt="Member 5" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Prasad Nagargoje</b></div>
+                        <div class="member-position" style="color: red;">Finance Head</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Batch 2025 -->
+        <div class="outer-team-container">
+            <h2 style="text-align:center; color:#388e3c; margin-bottom:32px; font-size:2rem;">Batch-2025</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Prajakta Pednekar.png" alt="Member 1" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Prajakta Pednekar</b></div>
+                        <div class="member-position" style="color: red;">Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Vaibhav Gaikwad.png" alt="Member 2" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Vaibhav Gaikwad</b></div>
+                        <div class="member-position" style="color: red;">Vice-Captain</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Devashri Daud.png" alt="Member 3" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Devashri Daud</b></div>
+                        <div class="member-position" style="color: red;">Technical Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Shivgonda Patil.png" alt="Member 4" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Shivgonda Patil</b></div>
+                        <div class="member-position" style="color: red;">Manufacturing Head</div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo-section">
+                        <img src="Kalpesh Dhongde.png" alt="Member 5" class="member-photo">
+                    </div>
+                    <div class="member-info-section">
+                        <div class="member-name"><b>Kalpesh Dhongde</b></div>
+                        <div class="member-position" style="color: red;">Finance Head</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

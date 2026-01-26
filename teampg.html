@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Our Team Members | Team MechAgrinics</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ===== Professional Color Palette & Reset ===== */
+    :root {
+      --primary-green: #1b5e20;
+      --accent-green: #4caf50;
+      --light-bg: #f8faf8;
+      --text-dark: #2d3436;
+    }
+
+    body {
+      font-family: 'Inter', "Segoe UI", sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    header.page-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header.page-title h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary-green);
+    }
+
+    .title-underline {
+      width: 70px;
+      height: 4px;
+      background: var(--accent-green);
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    /* ===== Faculty Card ===== */
+    .faculty-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    .faculty-card {
+      display: flex;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+      overflow: hidden;
+      max-width: 950px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .faculty-card img {
+      width: 350px;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .faculty-content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ===== Leadership Grid ===== */
+    .leader-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .leader-card {
+      background: white;
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .leader-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(76, 175, 80, 0.15);
+    }
+
+    .leader-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 15px;
+    }
+
+    .role-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: #fff5f5;
+      color: #e53935;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* ===== UPDATED: WRAPPING MEMBER GRID ===== */
+    .member-tray {
+      display: flex;
+      flex-wrap: wrap; /* Allows cards to wrap to the next line */
+      justify-content: center; /* Centers cards in the row */
+      gap: 25px;
+      padding: 20px 0;
+    }
+
+    .member-item {
+      flex: 0 1 200px; /* Non-slider width, fits 5-6 per row on desktop */
+      background: white;
+      border-radius: 20px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0f0;
+      transition: all 0.3s ease;
+    }
+
+    .member-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-green);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .member-photo {
+      width: 175px;
+      height: 175px;
+      border-radius: 10%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 3px solid #e8f5e9;
+      background: #f0f0f0;
+    }
+
+    .member-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      line-height: 1.3;
+    }
+
+    /* ===== Responsive Handling ===== */
+    @media (max-width: 1100px) {
+      .leader-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .faculty-card { flex-direction: column; }
+      .faculty-card img { width: 100%; height: 300px; }
+      .leader-grid { grid-template-columns: repeat(2, 1fr); }
+      .member-item { flex: 0 1 160px; } /* Smaller cards on tablets */
+    }
+
+    @media (max-width: 480px) {
+      .leader-grid { grid-template-columns: 1fr; }
+      header.page-title h1 { font-size: 2rem; }
+      .member-item { flex: 0 1 140px; padding: 15px 10px; } /* Fits 2 per row on small phones */
+      .member-photo { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+ <header class="bg-white/85 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <a href="index.html" class="flex items-center space-x-2">
+      <span class="text-2xl font-extrabold text-green-800 tracking-tight">
+        Team MechAgrinics
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center space-x-4">
+      <a href="index.html#hero" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">About Us</a>
+      <a href="teampg.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Our Team</a>
+      
+      <div class="relative group">
+        <a href="projects.html" class="text-stone-600 group-hover:text-green-700 px-3 py-2 font-medium flex items-center">
+          Projects <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+        <div class="absolute hidden group-hover:block bg-white border border-stone-100 shadow-xl rounded-xl mt-1 w-64 overflow-hidden">
+          <a href="prj1.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Multi-Vegetable Transplanter 🌱</a>
+          <a href="prj2.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Onion Harvester (Soon)</a>
+        </div>
+      </div>
+
+      <a href="achievements.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Achievements</a>
+      <a href="alumni.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Alumni</a>
+      
+      <a href="contact.html" class="ml-2 bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg">
+        Get In Touch
+      </a>
+    </nav>
+
+    <button id="mobile-menu-button" class="lg:hidden text-stone-600 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-6 py-6 space-y-4 shadow-2xl">
+    <a href="index.html#hero" class="block text-stone-600 font-medium text-lg">About Us</a>
+    <a href="teampg.html" class="block text-stone-600 font-medium text-lg">Our Team</a>
+    <a href="projects.html" class="block text-stone-600 font-medium text-lg border-l-4 border-green-600 pl-3">Projects</a>
+    <div class="pl-6 space-y-2">
+      <a href="prj1.html" class="block text-stone-500 text-sm italic">Multi-Vegetable Transplanter</a>
+      <a href="prj2.html" class="block text-stone-500 text-sm italic">Onion Harvester</a>
+    </div>
+    <a href="achievements.html" class="block text-stone-600 font-medium text-lg">Achievements</a>
+    <a href="alumni.html" class="block text-stone-600 font-medium text-lg">Alumni</a>
+    <a href="contact.html" class="block bg-green-700 text-white text-center px-5 py-3 rounded-xl font-bold">
+      Get In Touch
+    </a>
+  </div>
+</header>
+
+  <section class="section-container">
+    <header class="page-title">
+      <h1>Faculty Coordinator</h1>
+      <div class="title-underline"></div>
+    </header>
+
+    <div class="faculty-wrapper">
+      <div class="faculty-card">
+        <img src="sundgesir.jpg" alt="Faculty Coordinator">
+        <div class="faculty-content">
+          <span class="role-badge" style="background: #e8f5e9; color: #2e7d32; width: fit-content;">Faculty Coordinator</span>
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">Prof. Dr. R.S. Sungde</h2>
+          <p class="text-gray-600 leading-relaxed mb-4 text-lg">
+            Guiding the team through technical hurdles and strategic planning to foster agricultural innovation.
+          </p>
+          <p class="font-bold text-green-800">Department of Mechanical Engineering, RSCOE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container" style="padding-top: 0;">
+    <header class="page-title">
+      <h1>Team Leadership</h1>
+      <div class="title-underline"></div>
+    </header>
+
+    <div class="leader-grid">
+      <div class="leader-card">
+        <img src="sujal_up.jpeg" alt="Sujal">
+        <span class="role-badge">Captain</span>
+        <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/"><h3 class="font-bold text-lg">Sujal Kothimbire</h3></a>
+        
+      </div>
+
+      <div class="leader-card">
+        <img src="teamM_pics/ds_up.jpeg" alt="Dhananjay">
+        <span class="role-badge">Vice-Captain</span>
+        <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/"><h3 class="font-bold text-lg">Dhananjay Shinde</h3></a>
+        
+      </div>
+
+      <div class="leader-card">
+        <img src="anil1.jpg" alt="Anil">
+        <span class="role-badge">Technical Head</span>
+        <a href="https://www.linkedin.com/in/anildhadge03/"><h3 class="font-bold text-lg">Anil Dhadge</h3></a>
+        
+      </div>
+
+      <div class="leader-card">
+        <img src="gaurav1.jpg" alt="Gaurav">
+        <span class="role-badge">Finance Head</span>
+        <a href="https://www.linkedin.com/in/gaurav-kotkar-30137231b/"><h3 class="font-bold text-lg">Gaurav Kotkar</h3></a>
+        
+      </div>
+
+      <div class="leader-card">
+        <img src="tejas.jpg" alt="Tejas">
+        <span class="role-badge">Manufacturing Head</span>
+        <a href="https://www.linkedin.com/in/tejas-muluk-8281452b2/"><h3 class="font-bold text-lg">Tejas Muluk</h3></a>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-100/50">
+    <div class="section-container">
+      <header class="page-title">
+        <h1>Our Dedicated Members</h1>
+        <div class="title-underline"></div>
+      </header>
+
+      <div class="mb-12">
+        <div class="member-tray">
+          <div class="member-item">
+            <img src="Vaibhav Gaikwad.png" alt="Member" class="member-photo">
+            <p class="member-name">Vaibhav Kailas Gaikwad</p>
+            <span class="role-badge">Peer Advisor</span>
+          </div>
+          <div class="member-item">
+            <img src="Kalpesh Dhongde.png" alt="Member" class="member-photo">
+            <p class="member-name">Kalpesh K. Dhongde</p>
+            <span class="role-badge">Peer Advisor</span>
+          </div>
+          <div class="member-item">
+            <img src="Shivgonda Patil.png" alt="Member" class="member-photo">
+            <p class="member-name">Shivgonda R. Patil</p>
+            <span class="role-badge">Peer Advisor</span>
+          </div>
+          
+          <div class="member-item">
+            <img src="Devashri Daud.png" alt="Member" class="member-photo">
+            <p class="member-name">Devashri Daud</p>
+            <span class="role-badge">Peer Advisor</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/VIPUL.JPG" alt="Member" class="member-photo">
+            <p class="member-name">Vipul Meshram</p>
+            <span class="role-badge">Development</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Siddharth.png" alt="Member" class="member-photo">
+            <p class="member-name">Siddharth Patare</p>
+            <span class="role-badge">Pick & Place</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/hardik.png" alt="Member" class="member-photo">
+            <p class="member-name">Hardik Gorde</p>
+            <span class="role-badge">Conveyer</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Rushikesh.png" alt="Member" class="member-photo">
+            <p class="member-name">Rushikesh Mane</p>
+            <span class="role-badge">Conveyer</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Gourav.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Gourav Bhosale</p>
+            <span class="role-badge">Digging</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Krushna.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Krushna Yede</p>
+            <span class="role-badge">Conveyer</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Nayan.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Nayan Wagh</p>
+            <span class="role-badge">Digging</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Pranali Salunkhe.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Pranali Salunkhe</p>
+            <span class="role-badge">Digging</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Aarya.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Aarya Wagh</p>
+            <span class="role-badge">Transmission</span>
+          </div>
+          <div class="member-item">
+            <img src="/teamM_pics/Pragati.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Pragati Ritpure</p>
+            <span class="role-badge">Transmission</span>
+          </div>
+          <div class="member-item">
+            <img src="teamM_pics/Atharv.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Atharv Sonawane (CSE)</p>
+            <span class="role-badge">Development</span>
+          </div>
+          <div class="member-item">
+            <img src="teamM_pics/rohan_up.jpeg" alt="Member" class="member-photo">
+            <p class="member-name">Rohan Ladkat</p>
+            <span class="role-badge">Transmission</span>
+          </div>
+          <div class="member-item">
+            <img src="teamM_pics/Sandhya_.jpg" alt="Member" class="member-photo">
+            <p class="member-name">Sandhya Gore</p>
+            <span class="role-badge">Pick & Place</span>
+          </div>
+          <div class="member-item">
+            <img src="teamM_pics/vishu.jpeg" alt="Member" class="member-photo">
+            <p class="member-name">Vishwambhari Jadhav</p>
+            <span class="role-badge">Pick & Place</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer id="contact" class="bg-green-900 text-stone-200 pt-16 pb-8 mt-20">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+      
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold text-white mb-2">Team MechAgrinics</h3>
+        <p class="text-stone-400 text-sm mb-6">Revolutionizing Agriculture Through Technology</p>
+        
+        <div class="rounded-lg overflow-hidden shadow-2xl w-full max-w-xs border border-green-800">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.442935277879!2d73.7438459751936!3d18.60032958252294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb9f2343e06d%3A0x6400f9a2e6b5a351!2sJSPM's%20Rajarshi%20Shahu%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000" 
+            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-6">Get In Touch</h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-center justify-center md:justify-start">
+            <span class="text-yellow-500 mr-2">✉</span> 
+            <a href="mailto:teammechagrinics2026@gmail.com" class="hover:text-white transition-colors">teammechagrinics2026@gmail.com</a>
+          </li>
+          <li>
+            <p class="font-medium text-stone-100">Captain - Sujal Kothimbire</p>
+            <p class="text-stone-400">+91 90752 91126</p>
+          </li>
+          <li>
+            <p class="font-medium text-stone-100">Vice-Captain - Dhananjay Shinde</p>
+            <p class="text-stone-400">+91 84858 67357</p>
+          </li>
+          <li class="pt-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500 font-bold">Location</p>
+            <p class="text-stone-400">Mechanical Engineering Dept (D-Building),<br>JSPM's RSCOE, Tathawade, Pune-33</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-semibold text-white mb-6">Follow Our Journey</h3>
+        <div class="flex space-x-4 mb-8">
+          <a href="https://www.linkedin.com/company/rscoe-team-mechagrinics/" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://img.icons8.com/color/48/linkedin.png" class="w-10 h-10" alt="LinkedIn" />
+          </a>
+          <a href="https://www.instagram.com/team_mechagrinics" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://img.icons8.com/color/48/instagram-new.png" class="w-10 h-10" alt="Instagram" />
+          </a>
+        </div>
+        <div class="text-xs font-bold tracking-[0.2em] text-yellow-600 uppercase border-l-2 border-yellow-600 pl-4">
+          Fervency • Liberty • Synergy
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-green-800 text-center">
+      <p class="text-stone-500 text-sm">
+        © <span id="current-year"></span> Team MechAgrinics RSCOE. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle Logic
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // Set Dynamic Copyright Year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
+  });
+</script>
+
+</body>
+</html>

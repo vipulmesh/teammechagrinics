@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automated Multi-Vegetable Transplanter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header (same as index.html) -->
+  <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-stone-200">
+    <div class="container mx-auto px-6">
+      <div class="py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-3 cursor-pointer">
+          <span class="text-2xl font-bold text-green-800 tracking-tight">Team MechAgrinics</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="index.html#hero" class="nav-link">About Us</a>
+          <a href="teampg.html" class="nav-link">Our Team</a>
+          <div class="dropdown">
+            <a href="projects.html" class="nav-link">Projects ▾</a>
+            <div class="dropdown-content">
+              <a href="prj1.html">Automated Multi-Vegetable Transplanter 🌱</a>
+              <a href="prj2.html">Onion Harvester(Coming Soon)</a>
+            </div>
+          </div>
+          <a href="achievements.html" class="nav-link">Our Achievements</a>
+          <a href="alumni.html" class="nav-link">Our Alumni(s)</a>
+          <a href="privacy.html" class="nav-link">Privacy Policy</a>
+          <a href="contact.html" class="nav-link">Get In Touch</a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden text-stone-600 hover:text-green-600" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="index.html#hero" class="nav-link">About Us</a>
+        <a href="teampg.html" class="nav-link">Our Team</a>
+        <div class="dropdown">
+          <a href="projects.html" class="nav-link">Projects ▾</a>
+          <div class="dropdown-content">
+            <a href="prj1.html">Automated Multi-Vegetable Transplanter 🌱</a>
+            <a href="prj2.html">Onion Harvester(Coming Soon)</a>
+          </div>
+        </div>
+        <a href="achievements.html" class="nav-link">Our Achievements</a>
+        <a href="alumni.html" class="nav-link">Our Alumni(s)</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <a href="contact.html" class="nav-link">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Gradient -->
+  <section class="relative w-full h-[60vh] bg-gradient-to-r from-green-700 via-green-600 to-green-500 flex items-center justify-center text-center px-6">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-md">
+        Automated Multi-Vegetable Transplanter 🌱
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-green-100">
+        Revolutionizing vegetable farming with automation, precision, and sustainability.
+      </p>
+      <a href="#about" class="inline-block mt-6 bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-green-100 transition">
+        Learn More
+      </a>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section id="about" class="py-16 bg-green-50">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6 text-center">
+        About the Project
+      </h2>
+      <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+        The <span class="font-semibold text-green-700">Automated Multi-Vegetable Transplanter</span> 
+        is an innovative agricultural machine designed to automate the process of planting vegetable seedlings into raised bed fields. 
+        Traditional transplanting is labor-intensive, time-consuming, and often inconsistent, leading to reduced crop survival rates. 
+        This machine eliminates manual intervention by integrating automated systems for sapling pickup, conveying, soil digging, planting, and soil covering.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-6 text-center">
+        With adjustable ground clearance, precise spacing, and gentle handling of delicate seedlings, 
+        the system ensures uniform planting depth and strong root establishment. By reducing human effort and improving efficiency, 
+        the transplanter not only enhances productivity but also contributes to sustainable farming practices.
+      </p>
+    </div>
+  </section>
+<!-- Prototype Demo Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6 text-center">
+      Prototype Demonstration
+    </h2>
+    <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto text-center">
+      Below is the working prototype of our Automated Multi-Vegetable Transplanter, 
+      designed and developed with precision to automate the transplanting process.
+    </p>
+
+    <!-- Flex Layout -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side: Image -->
+      <div class="flex justify-center">
+        <img src="projectimg.jpg" alt="Automated Multi-Vegetable Transplanter Prototype" 
+             class="rounded-xl shadow-xl border-4 border-green-100 max-w-md w-full object-contain">
+      </div>
+
+      <!-- Right Side: Key Features -->
+      <div>
+        <h3 class="text-2xl font-bold text-green-800 mb-6">Key Features</h3>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+            <h4 class="text-lg font-semibold text-green-700 mb-2">🤖 Automated Process</h4>
+            <p class="text-gray-600">Fully automated sapling pickup, soil digging, planting, and covering.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+            <h4 class="text-lg font-semibold text-green-700 mb-2">🌽 Multi-Crop Adaptability</h4>
+            <p class="text-gray-600">Adjustable for different vegetable crops and raised bed heights.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+            <h4 class="text-lg font-semibold text-green-700 mb-2">📏 Precision Planting</h4>
+            <p class="text-gray-600">Consistent depth and spacing ensure better crop establishment.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+            <h4 class="text-lg font-semibold text-green-700 mb-2">🌱 Root Protection</h4>
+            <p class="text-gray-600">Soil covering system improves root health and survival rate.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+            <h4 class="text-lg font-semibold text-green-700 mb-2">⚡ Efficient & Farmer-Friendly</h4>
+            <p class="text-gray-600">Reduces human effort while increasing overall productivity.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition">
+            <h4 class="text-lg font-semibold text-green-700 mb-2">🌍 Sustainable Impact</h4>
+            <p class="text-gray-600">Supports eco-friendly farming practices for long-term benefits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

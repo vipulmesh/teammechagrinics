@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - MechAgrinics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header class="bg-white/85 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <a href="index.html" class="flex items-center space-x-2">
+      <span class="text-2xl font-extrabold text-green-800 tracking-tight">
+        Team MechAgrinics
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center space-x-4">
+      <a href="index.html#hero" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">About Us</a>
+      <a href="teampg.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Our Team</a>
+      
+      <div class="relative group">
+        <a href="projects.html" class="text-stone-600 group-hover:text-green-700 px-3 py-2 font-medium flex items-center">
+          Projects <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+        <div class="absolute hidden group-hover:block bg-white border border-stone-100 shadow-xl rounded-xl mt-1 w-64 overflow-hidden">
+          <a href="prj1.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Multi-Vegetable Transplanter 🌱</a>
+          <a href="prj2.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Onion Harvester (Soon)</a>
+        </div>
+      </div>
+
+      <a href="achievements.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Achievements</a>
+      <a href="alumni.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Alumni</a>
+      
+      <a href="contact.html" class="ml-2 bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg">
+        Get In Touch
+      </a>
+    </nav>
+
+    <button id="mobile-menu-button" class="lg:hidden text-stone-600 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-6 py-6 space-y-4 shadow-2xl">
+    <a href="index.html#hero" class="block text-stone-600 font-medium text-lg">About Us</a>
+    <a href="teampg.html" class="block text-stone-600 font-medium text-lg">Our Team</a>
+    <a href="projects.html" class="block text-stone-600 font-medium text-lg border-l-4 border-green-600 pl-3">Projects</a>
+    <div class="pl-6 space-y-2">
+      <a href="prj1.html" class="block text-stone-500 text-sm italic">Multi-Vegetable Transplanter</a>
+      <a href="prj2.html" class="block text-stone-500 text-sm italic">Onion Harvester</a>
+    </div>
+    <a href="achievements.html" class="block text-stone-600 font-medium text-lg">Achievements</a>
+    <a href="alumni.html" class="block text-stone-600 font-medium text-lg">Alumni</a>
+    <a href="contact.html" class="block bg-green-700 text-white text-center px-5 py-3 rounded-xl font-bold">
+      Get In Touch
+    </a>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>
+
+  <div class="contact-container">
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+     <iframe 
+  src="https://forms.gle/GavgDgpkR6GERNgm7" 
+  width="100%" 
+  height="650" 
+  frameborder="0" 
+  marginheight="0" 
+  marginwidth="0">
+  Loading…
+</iframe>
+
+    </div>
+  <div class="contact-info">
+  <h3>Contact Information</h3>
+  <p><strong>Email:</strong> teammechagrinics2026@gmail.com</p>
+  <p><strong>Captain - Sujal Kothimbire :</strong> +91 90752 91126</p>
+  <p><strong>Vice-Captain - Dhananjay Shinde :</strong> +91 84858 67357 </p>
+  <p>
+    <br>Mechanical Engineering Department (D- Building),</br>
+    JSPM's Rajarshi Shahu College Of Engineering, Tathawade, Pune-33
+  </p>
+
+  <!-- Google Map Embed -->
+  <div class="map-container mt-4 rounded-xl overflow-hidden shadow-lg">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.426660633041!2d73.74713411489463!3d18.618575087360568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a35c5a8d2b%3A0x8dc5b8d9f0d19647!2sJSPM's%20Rajarshi%20Shahu%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1692898123456!5m2!1sen!2sin" 
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+<footer id="contact" class="bg-green-900 text-stone-200 pt-16 pb-8 mt-20">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+      
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold text-white mb-2">Team MechAgrinics</h3>
+        <p class="text-stone-400 text-sm mb-6">Revolutionizing Agriculture Through Technology</p>
+        
+        <div class="rounded-lg overflow-hidden shadow-2xl w-full max-w-xs border border-green-800">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.442935277879!2d73.7438459751936!3d18.60032958252294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb9f2343e06d%3A0x6400f9a2e6b5a351!2sJSPM&#39;s%20Rajarshi%20Shahu%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000" 
+            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-6">Get In Touch</h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-center justify-center md:justify-start">
+            <span class="text-yellow-500 mr-2">✉</span> 
+            <a href="mailto:teammechagrinics2026@gmail.com" class="hover:text-white transition-colors">teammechagrinics2026@gmail.com</a>
+          </li>
+          <li>
+            <p class="font-medium text-stone-100">Captain - Sujal Kothimbire</p>
+            <p class="text-stone-400">+91 90752 91126</p>
+          </li>
+          <li>
+            <p class="font-medium text-stone-100">Vice-Captain - Dhananjay Shinde</p>
+            <p class="text-stone-400">+91 84858 67357</p>
+          </li>
+          <li class="pt-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500 font-bold">Location</p>
+            <p class="text-stone-400">Mechanical Engineering Dept (D-Building),<br>JSPM's RSCOE, Tathawade, Pune-33</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-semibold text-white mb-6">Follow Our Journey</h3>
+        <div class="flex space-x-4 mb-8">
+          <a href="https://www.linkedin.com/company/rscoe-team-mechagrinics/" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://img.icons8.com/color/48/linkedin.png" class="w-10 h-10" alt="LinkedIn" />
+          </a>
+          <a href="https://www.instagram.com/team_mechagrinics" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://img.icons8.com/color/48/instagram-new.png" class="w-10 h-10" alt="Instagram" />
+          </a>
+        </div>
+        <div class="text-xs font-bold tracking-[0.2em] text-yellow-600 uppercase border-l-2 border-yellow-600 pl-4">
+          Fervency • Liberty • Synergy
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-green-800 text-center">
+      <p class="text-stone-500 text-sm">
+        © <span id="current-year"></span> Team MechAgrinics RSCOE. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /**
+   * Universal Script for Team MechAgrinics Website
+   * Handles: Mobile Menu, Active Year, and Smooth Scrolling
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Menu Toggle Logic
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // 2. Set Dynamic Copyright Year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // 3. Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if(targetId !== "#") {
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  });
+</script>
+</html>
