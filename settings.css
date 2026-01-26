@@ -61,3 +61,46 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .header {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .settings-item {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .header {
+    padding: 12px;
+  }
+  
+  .header h1 {
+    font-size: 1.25rem;
+  }
+  
+  .settings-item {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .arrow {
+    font-size: 18px;
+  }
+}

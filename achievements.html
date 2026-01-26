@@ -108,6 +108,66 @@
       width: 200%;
       animation: scroll 20s linear infinite;
     }
+    @media (max-width: 768px) {
+  .achievements-container {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .card img {
+    height: 200px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body h3 {
+    font-size: 1.25rem;
+  }
+  
+  .card-body p {
+    font-size: 0.9rem;
+  }
+  
+  .page-header {
+    font-size: 1.75rem;
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-container {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+  
+  .card img {
+    height: 180px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-body h3 {
+    font-size: 1.1rem;
+  }
+  
+  .award-tag {
+    font-size: 0.8rem;
+  }
+  
+  .page-header {
+    font-size: 1.5rem;
+    padding: 20px 10px;
+  }
+}
   </style>
 </head>
 <body class="flex flex-col min-h-screen">

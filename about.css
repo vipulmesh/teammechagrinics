@@ -45,19 +45,42 @@ a:hover {
 /* Responsive spacing for smaller screens */
 @media (max-width: 768px) {
   .about-container {
-    margin: 30px 20px 40px 20px;
-    padding: 30px 20px;
+    margin: 30px 15px 40px 15px;
+    padding: 25px 20px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-top: 25px;
   }
 
   p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    margin: 20px 10px 30px 10px;
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 0.85rem;
   }
 }

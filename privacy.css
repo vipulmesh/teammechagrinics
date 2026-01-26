@@ -61,10 +61,10 @@ a:hover {
 }
 
 /* ===== Responsive Fixes ===== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .privacy-container {
-    margin: 20px;
-    padding: 25px 20px;
+    margin: 30px 15px;
+    padding: 30px 20px;
   }
 
   h1 {
@@ -73,5 +73,37 @@ a:hover {
 
   h2 {
     font-size: 1.3rem;
+    margin-top: 30px;
+  }
+  
+  p, li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-container {
+    margin: 20px 10px;
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 25px;
+    padding-left: 10px;
+  }
+  
+  p, li {
+    font-size: 0.9rem;
+  }
+  
+  ul {
+    margin-left: 15px;
+    padding-left: 10px;
   }
 }
