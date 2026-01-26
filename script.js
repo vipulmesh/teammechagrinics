@@ -1,27 +1,44 @@
 // ===== MOBILE MENU TOGGLE =====
-const menuBtn = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-if (menuBtn && mobileMenu) {
-  menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    mobileMenu.classList.toggle('hidden');
-  });
+  if (menuBtn && mobileMenu) {
+    // Remove any existing event listeners by cloning the button
+    const newMenuBtn = menuBtn.cloneNode(true);
+    menuBtn.parentNode.replaceChild(newMenuBtn, menuBtn);
+    
+    const newMobileMenu = mobileMenu;
+    const newBtn = document.getElementById('mobile-menu-button');
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
-
-  // Close menu when clicking a link
-  const mobileLinks = mobileMenu.querySelectorAll('a');
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+    newBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      newMobileMenu.classList.toggle('hidden');
     });
-  });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!newMobileMenu.contains(e.target) && !newBtn.contains(e.target)) {
+        newMobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = newMobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        newMobileMenu.classList.add('hidden');
+      });
+    });
+  }
+}
+
+// Initialize on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMobileMenu);
+} else {
+  initMobileMenu();
 }
 
 // ===== SET COPYRIGHT YEAR =====
