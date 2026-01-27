@@ -82,31 +82,18 @@
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
 
-    if (btn && menu) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        menu.classList.toggle('hidden');
-      });
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
 
-      // Close menu when clicking a link
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          menu.classList.add('hidden');
-        });
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!menu.contains(e.target) && !btn.contains(e.target)) {
-          menu.classList.add('hidden');
-        }
-      });
-    }
+  // Close menu when clicking a link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
   });
 </script>
 
@@ -136,7 +123,7 @@
 
     <!-- Bottom Line -->
 <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 
-            text-sm md:text-lg font-light flex flex-wrap justify-center space-x-4 md:space-x-10 text-yellow-600 font-sanskrit">
+            text-lg md:text-xl font-light flex space-x-10 text-yellow-600 font-sanskrit">
   <span>FERVENCY</span>
   <span>||</span>
   <span>LIBERTY</span>
@@ -152,23 +139,34 @@
 
 
             <!-- About Section -->
-<section id="about" class="py-12 md:py-24 bg-stone-100/70">
-  <div class="container mx-auto px-4 md:px-6">
+<section id="about" class="py-24 bg-stone-100/70">
+  <div class="container mx-auto px-6">
     <div class="max-w-4xl mx-auto text-center">
       
       <!-- Heading with fade-in -->
-      <h2 class="text-2xl md:text-4xl font-bold text-green-800 mb-4 tracking-tight opacity-0 animate-fadeInUp">
+      <h2 class="text-4xl font-bold text-green-800 mb-4 tracking-tight opacity-0 animate-fadeInUp">
         About Our Club
       </h2>
-      <div class="w-16 md:w-24 h-1.5 bg-yellow-500 mx-auto mb-6 md:mb-10 rounded opacity-0 animate-fadeInUp animation-delay-200"></div>
+      <div class="w-24 h-1.5 bg-yellow-500 mx-auto mb-10 rounded opacity-0 animate-fadeInUp animation-delay-200"></div>
 
       <!-- Added Image with zoom-in -->
-      <div class="mb-6 md:mb-8 flex justify-center px-4">
-        <img src="aboutpic.png" alt="About Image" class="about-image shadow-lg opacity-0 animate-zoomIn animation-delay-400 w-full max-w-full">
-      </div>
+     <!-- About Images -->
+<div class="mb-8 flex flex-col sm:flex-row justify-center items-center gap-5">
+  <img 
+    src="aboutpic.png" 
+    alt="About Image 1"
+    class="about-image shadow-lg w-full sm:w-1/2 max-w-sm opacity-0 animate-zoomIn animation-delay-400"
+  />
+
+  <img 
+    src="Picture2.png" 
+    alt="About Image 2"
+    class="about-image shadow-lg w-full sm:w-1/2 max-w-sm opacity-0 animate-zoomIn animation-delay-600"
+  />
+</div>
 
       <!-- Paragraphs with staggered animation -->
-      <p class="text-base md:text-lg text-stone-700 leading-relaxed mb-4 md:mb-6 opacity-0 animate-fadeInUp animation-delay-600 px-4">
+      <p class="text-lg text-stone-700 leading-relaxed mb-6 opacity-0 animate-fadeInUp animation-delay-600">
         Team MechAgrinics, from JSPM's Rajarshi Shahu College of
         Engineering, located in Pune, India, is a group of dedicated
         students competing in agricultural technology challenges.
@@ -177,7 +175,7 @@
         farming machinery aimed at enhancing agricultural efficiency
         and sustainability.
       </p>
-      <p class="text-base md:text-lg text-stone-700 leading-relaxed opacity-0 animate-fadeInUp animation-delay-800 px-4">
+      <p class="text-lg text-stone-700 leading-relaxed opacity-0 animate-fadeInUp animation-delay-800">
         Since its inception, Team MechAgrinics has
         consistently excelled in competitions, achieving notable rankings
         and earning recognition for its cutting-edge designs and strong
@@ -188,6 +186,74 @@
     </div>
   </div>
 </section>
+<section class="bg-white border-b border-stone-200">
+      <div class="container mx-auto px-6 py-20 text-center">
+        <span class="text-green-600 font-bold uppercase tracking-widest text-sm">Engineering Innovation</span>
+        <h1 class="text-4xl md:text-6xl font-black text-stone-900 mt-4 mb-6">Our Projects</h1>
+        <p class="max-w-2xl mx-auto text-lg text-stone-600 leading-relaxed">
+          Bridging the gap between traditional farming and modern automation. Explore our high-precision prototypes designed for the future of agriculture.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid gap-12 md:grid-cols-2">
+
+          <div class="project-card group bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative h-72 overflow-hidden">
+              <img src="projectimg.jpg" alt="Transplanter" class="project-image w-full h-full object-cover transition-transform duration-700">
+                     <div class="absolute top-4 left-4 bg-yellow-400 px-4 py-1.5 rounded-full text-xs font-bold text-yellow-900 shadow-sm">
+                Completed Project
+              </div>
+            </div>
+            <div class="p-8 md:p-10">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-stone-100 text-stone-600 px-3 py-1 rounded-md text-xs font-semibold">Automation</span>
+                <span class="bg-stone-100 text-stone-600 px-3 py-1 rounded-md text-xs font-semibold">CAD/CAM</span>
+                <span class="bg-stone-100 text-stone-600 px-3 py-1 rounded-md text-xs font-semibold">AgriTech</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-4 group-hover:text-green-700 transition-colors">
+                Automated Multi-Vegetable Transplanter
+              </h3>
+              <p class="text-stone-600 leading-relaxed mb-8">
+                A revolutionary leap in planting technology. Our transplanter automates the entire lifecycle of a sapling—from pickup to precision planting and soil covering—reducing labor costs by up to 70%.
+              </p>
+              <a href="prj1.html" class="inline-flex items-center text-green-700 font-bold hover:gap-3 transition-all">
+                Project Details 
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card group bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div class="relative h-72 overflow-hidden bg-stone-200">
+              <img src="onion harvester.jpg" alt="Onion Harvester" class="project-image w-full h-full object-cover transition-transform duration-700">
+              <div class="absolute top-4 left-4 bg-yellow-400 px-4 py-1.5 rounded-full text-xs font-bold text-yellow-900 shadow-sm">
+                Completed Project
+              </div>
+            </div>
+            <div class="p-8 md:p-10">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-stone-100 text-stone-600 px-3 py-1 rounded-md text-xs font-semibold">Heavy Machinery</span>
+                <span class="bg-stone-100 text-stone-600 px-3 py-1 rounded-md text-xs font-semibold">IoT</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-4 group-hover:text-green-700 transition-colors">
+                Self Propelled Onion Harvester
+              </h3>
+              <p class="text-stone-600 leading-relaxed mb-8">
+                Designed to minimize damage to crop bulbs during extraction. This harvester integrates smart depth sensors to ensure efficiency across varying soil terrains.
+              </p>
+              <a href="prj2.html" class="inline-flex items-center text-green-700 font-bold hover:gap-3 transition-all">
+                Project Details 
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 <!-- Custom Animations -->
 <style>
@@ -229,16 +295,16 @@
         </main>
 
         <!-- Footer -->
-       <footer id="contact" class="bg-green-900 text-stone-200 pt-12 md:pt-20 pb-8">
-  <div class="container mx-auto px-4 md:px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
+       <footer id="contact" class="bg-green-900 text-stone-200 pt-20 pb-8">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
       
       <!-- About Column (Team MechAgrinics + Map) -->
       <div class="flex flex-col items-center md:items-start">
         <div class="flex items-center space-x-3 mb-4">
-          <h3 class="text-lg md:text-xl font-semibold text-white">Team MechAgrinics</h3>
+          <h3 class="text-xl font-semibold text-white">Team MechAgrinics</h3>
         </div>
-        <p class="text-stone-300 max-w-xs mb-4 text-sm md:text-base">
+        <p class="text-stone-300 max-w-xs mb-4">
           Revolutionizing Agriculture Through Technology
         </p>
 
@@ -247,7 +313,7 @@
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.426660633041!2d73.74713411489463!3d18.618575087360568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a35c5a8d2b%3A0x8dc5b8d9f0d19647!2sJSPM's%20Rajarshi%20Shahu%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1692898123456!5m2!1sen!2sin"
             width="100%" 
-            height="180" 
+            height="200" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
@@ -258,26 +324,26 @@
 
       <!-- Contact Info Column -->
       <div>
-        <h3 class="text-lg md:text-xl font-semibold text-white mb-4">Get In Touch</h3>
-        <ul class="space-y-2 md:space-y-3 text-sm md:text-base">
+        <h3 class="text-xl font-semibold text-white mb-4">Get In Touch</h3>
+        <ul class="space-y-3">
           <li class="contact-item">
-            <a href="mailto:teammechagrinics2026@gmail.com" class="break-words">
+            <a href="mailto:teammechagrinics2026@gmail.com">
               Email : teammechagrinics2026@gmail.com
             </a>
           </li>
           <li class="contact-item"><span> Captain - Sujal Kothimbire : +91 90752 91126</span></li>
           <li class="contact-item"><span> Vice-Captain - Dhananjay Shinde : +91 84858 67357</span></li>
           <li class="contact-item">
-            <span class="block">
+            <span>
               <br>Mechanical Engineering Department (D- Building),</br>
               JSPM's Rajarshi Shahu College Of Engineering, Tathawade, Pune-33
             </span>
           </li>
           <li class="contact-item">
-            <span class="block">
+            <span>
               <br><b>Our Proud Sponsers -</b></br>
               Mahendra Agro Agency ,Shrigonda
-              <a href="mailto:mahendraagro99@gmail.com" class="block">
+              <a href="mailto:mahendraagro99@gmail.com">
               <p>Email : mahendraagro99@gmail.com</p>
             </a>
             </span>
@@ -287,13 +353,13 @@
 
       <!-- Social Media Column -->   
       <div>
-        <h3 class="text-lg md:text-xl font-semibold text-white mb-4">Follow Us</h3>
+        <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
         <div class="flex justify-center md:justify-start space-x-5">
           <a href="https://www.linkedin.com/company/rscoe-team-mechagrinics/" target="_blank">
-            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" class="w-10 h-10 md:w-12 md:h-12" />
+            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" />
           </a>
           <a href="https://www.instagram.com/team_mechagrinics?igsh=MWp3cmJvOGl2dDR0aA==" target="_blank">
-            <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" class="w-10 h-10 md:w-12 md:h-12" />
+            <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
           </a>
         </div>
       </div>
@@ -302,15 +368,15 @@
 
 
     <!-- Copyright -->
-    <div class="mt-8 md:mt-16 pt-6 md:pt-8 border-t border-green-800 text-center text-stone-400 text-xs md:text-sm px-4">
+    <div class="mt-16 pt-8 border-t border-green-800 text-center text-stone-400 text-sm">
       <p>&copy; <span id="year"></span> Team MechAgrinics RSCOE. All Rights Reserved.</p>
     </div>
   </div>
       <!-- Sliding Text Band -->
 <!-- Sliding Text Band -->
 <!-- Perfectly Smooth Continuous Sliding Band -->
-<div class="bg-green-900 text-yellow-400 py-2 md:py-3 overflow-hidden relative">
-  <div class="marquee font-extrabold text-lg md:text-3xl tracking-[0.2em] md:tracking-[0.4em] uppercase" style="font-family: 'Oswald', sans-serif;">
+<div class="bg-green-900 text-yellow-400 py-3 overflow-hidden relative">
+  <div class="marquee font-extrabold text-3xl tracking-[0.4em] uppercase" style="font-family: 'Oswald', sans-serif;">
     <span>
       FERVENCY &nbsp; || &nbsp; LIBERTY &nbsp; || &nbsp; SYNERGY &nbsp; • &nbsp;
       FERVENCY &nbsp; || &nbsp; LIBERTY &nbsp; || &nbsp; SYNERGY &nbsp; • &nbsp;
