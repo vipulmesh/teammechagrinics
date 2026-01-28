@@ -276,6 +276,61 @@
         font-size: 0.8rem;
       }
     }
+
+    /* ===== Name + LinkedIn Wrapper ===== */
+.name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.name-row a.name-link {
+  font-weight: 700;
+  color: #1b5e20;
+  transition: color 0.2s ease;
+}
+
+.name-row a.name-link:hover {
+  color: #2e7d32;
+}
+
+/* LinkedIn icon */
+.linkedin-btn {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  background: #0a66c2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.linkedin-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.linkedin-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(10, 102, 194, 0.3);
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 480px) {
+  .linkedin-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .linkedin-btn img {
+    width: 11px;
+    height: 11px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -345,7 +400,12 @@
         <img src="sundgesir.jpg" alt="Faculty Coordinator">
         <div class="faculty-content">
           <span class="role-badge" style="background: #e8f5e9; color: #2e7d32; width: fit-content;">Faculty Coordinator</span>
-          <h2 class="text-3xl font-bold text-gray-800 mb-2">Prof. Dr. R.S. Sungde</h2>
+<div class="name-row mb-2" style="justify-content: flex-start;">
+  <span class="text-3xl font-bold text-gray-800">
+    Prof. Dr. R.S. Sungde
+  </span>
+
+</div>
           <p class="text-gray-600 leading-relaxed mb-4 text-lg">
             Guiding the team through technical hurdles and strategic planning to foster agricultural innovation.
           </p>
@@ -365,36 +425,112 @@
       <div class="leader-card">
         <img src="sujal_up.jpeg" alt="Sujal">
         <span class="role-badge">Captain</span>
-        <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/"><h3 class="font-bold text-lg">Sujal Kothimbire</h3></a>
-        
+       <div class="name-row">
+  <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/" 
+     target="_blank" 
+     class="name-link text-lg">
+    Sujal Kothimbire
+  </a>
+  <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/" 
+ target="_blank"
+   class="linkedin-btn"
+   aria-label="LinkedIn">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
+  </svg>
+  </a>
+</div>
+  
       </div>
 
       <div class="leader-card">
         <img src="teamM_pics/ds_up.jpeg" alt="Dhananjay">
         <span class="role-badge">Vice-Captain</span>
-        <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/"><h3 class="font-bold text-lg">Dhananjay Shinde</h3></a>
-        
+       <div class="name-row">
+  <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/" 
+     target="_blank" 
+     class="name-link text-lg">
+    Dhananjay Shinde
+  </a>
+  <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/" 
+ target="_blank"
+   class="linkedin-btn"
+   aria-label="LinkedIn">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
+  </svg>
+  </a>
+</div>
+
       </div>
 
       <div class="leader-card">
         <img src="anil1.jpg" alt="Anil">
         <span class="role-badge">Technical Head</span>
-        <a href="https://www.linkedin.com/in/anildhadge03/"><h3 class="font-bold text-lg">Anil Dhadge</h3></a>
-        
+       <div class="name-row">
+  <a href="https://www.linkedin.com/in/anildhadge03/" 
+     target="_blank" 
+     class="name-link text-lg">
+    Anil Dhadge
+  </a>
+  <a href="https://www.linkedin.com/in/anildhadge03/" 
+ target="_blank"
+   class="linkedin-btn"
+   aria-label="LinkedIn">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
+  </svg>
+  </a>
+</div>
+ 
       </div>
 
       <div class="leader-card">
         <img src="gaurav1.jpg" alt="Gaurav">
         <span class="role-badge">Finance Head</span>
-        <a href="https://www.linkedin.com/in/gaurav-kotkar-30137231b/"><h3 class="font-bold text-lg">Gaurav Kotkar</h3></a>
-        
+       <div class="name-row">
+  <a href="https://www.linkedin.com/in/gaurav-kotkar-30137231b/" 
+     target="_blank" 
+     class="name-link text-lg">
+    Gaurav Kotkar
+  </a>
+  <a href="https://www.linkedin.com/in/gaurav-kotkar-30137231b/" 
+ target="_blank"
+   class="linkedin-btn"
+   aria-label="LinkedIn">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
+  </svg>
+  </a>
+</div>
+
       </div>
 
       <div class="leader-card">
         <img src="tejas.jpg" alt="Tejas">
         <span class="role-badge">Manufacturing Head</span>
-        <a href="https://www.linkedin.com/in/tejas-muluk-8281452b2/"><h3 class="font-bold text-lg">Tejas Muluk</h3></a>
-        
+        <div class="name-row">
+  <a href="https://www.linkedin.com/in/tejas-muluk-8281452b2/" 
+     target="_blank" 
+     class="name-link text-lg">
+    Tejas Muluk
+  </a>
+  <a href="https://www.linkedin.com/in/tejas-muluk-8281452b2/" 
+   target="_blank"
+   class="linkedin-btn"
+   aria-label="LinkedIn">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
+  </svg>
+</a>
+
+</div>
+
       </div>
     </div>
   </section>
@@ -410,93 +546,219 @@
         <div class="member-tray">
           <div class="member-item">
             <img src="Vaibhav Gaikwad.png" alt="Member" class="member-photo">
-            <p class="member-name">Vaibhav Kailas Gaikwad</p>
+<div class="name-row">
+  <span class="member-name">Vaibhav Gaikwad</span>
+  <a href="https://www.linkedin.com/in/vaibhav-gaikwad-4b710530a/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Peer Advisor</span>
           </div>
           <div class="member-item">
             <img src="Kalpesh Dhongde.png" alt="Member" class="member-photo">
-            <p class="member-name">Kalpesh K. Dhongde</p>
+<div class="name-row">
+  <span class="member-name">Kalpesh Dhongde</span>
+  <a href="https://www.linkedin.com/in/kalpesh-dhongde-2a0938259/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Peer Advisor</span>
           </div>
           <div class="member-item">
             <img src="Shivgonda Patil.png" alt="Member" class="member-photo">
-            <p class="member-name">Shivgonda R. Patil</p>
+<div class="name-row">
+  <span class="member-name">Shivgonda Patil</span>
+  <a href="https://www.linkedin.com/in/shivgonda-patil-6b28a3258/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Peer Advisor</span>
           </div>
           
           <div class="member-item">
             <img src="Devashri Daud.png" alt="Member" class="member-photo">
-            <p class="member-name">Devashri Daud</p>
+<div class="name-row">
+  <span class="member-name">Devashri Daud</span>
+  <a href="https://www.linkedin.com/in/devashri-daud-8b28a325b/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Peer Advisor</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/VIPUL.JPG" alt="Member" class="member-photo">
-            <p class="member-name">Vipul Meshram</p>
+<div class="name-row">
+  <span class="member-name">Vipul Meshram</span>
+  <a href="https://www.linkedin.com/in/vipul-meshram-83645732a/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Development</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Siddharth.png" alt="Member" class="member-photo">
-            <p class="member-name">Siddharth Patare</p>
+<div class="name-row">
+  <span class="member-name">Siddharth Patare</span>
+  <a href="https://www.linkedin.com/in/YOUR_PROFILE" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Pick & Place</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/hardik.png" alt="Member" class="member-photo">
-            <p class="member-name">Hardik Gorde</p>
+<div class="name-row">
+  <span class="member-name">Hardik Gorde</span>
+  <a href="https://www.linkedin.com/in/hardik-gorde-6648a6321/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Conveyer</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Rushikesh.png" alt="Member" class="member-photo">
-            <p class="member-name">Rushikesh Mane</p>
+<div class="name-row">
+  <span class="member-name">Rushikesh Mane</span>
+  <a href="https://www.linkedin.com/in/rushikesh-mane-507b08337/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Conveyer</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Gourav.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Gourav Bhosale</p>
+<div class="name-row">
+  <span class="member-name">Gourav Bhosale</span>
+  <a href="https://www.linkedin.com/in/YOUR_PROFILE" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Digging</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Krushna.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Krushna Yede</p>
+<div class="name-row">
+  <span class="member-name">Krushna Yede</span>
+  <a href="https://www.linkedin.com/in/krushna-yede-558ba435b/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Conveyer</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Nayan.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Nayan Wagh</p>
+<div class="name-row">
+  <span class="member-name">Nayan Wagh</span>
+  <a href="https://www.linkedin.com/in/nayan-wagh-42535a3a8/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Digging</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Pranali Salunkhe.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Pranali Salunkhe</p>
+<div class="name-row">
+  <span class="member-name">Pranali Salunkhe</span>
+  <a href="" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Digging</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Aarya.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Aarya Wagh</p>
+<div class="name-row">
+  <span class="member-name">Aarya Wagh</span>
+  <a href="https://www.linkedin.com/in/aarya-wagh-11a3a9328/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Transmission</span>
           </div>
           <div class="member-item">
             <img src="/teamM_pics/Pragati.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Pragati Ritpure</p>
+<div class="name-row">
+  <span class="member-name">Pragati Ritpure</span>
+  <a href="https://www.linkedin.com/in/pragati-ritpure-41745a33a/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Transmission</span>
           </div>
           <div class="member-item">
             <img src="teamM_pics/Atharv.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Atharv Sonawane (CSE)</p>
+<div class="name-row">
+  <span class="member-name">Atharv Sonawane (CSE)</span>
+  <a href="https://www.linkedin.com/in/atharv-sonawane-9587a331b/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Development</span>
           </div>
           <div class="member-item">
             <img src="teamM_pics/rohan_up.jpeg" alt="Member" class="member-photo">
-            <p class="member-name">Rohan Ladkat</p>
+<div class="name-row">
+  <span class="member-name">Rohan Ladkat</span>
+  <a href="https://www.linkedin.com/in/rohan-ladkat-054144339/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Transmission</span>
           </div>
           <div class="member-item">
             <img src="teamM_pics/Sandhya_.jpg" alt="Member" class="member-photo">
-            <p class="member-name">Sandhya Gore</p>
+<div class="name-row">
+  <span class="member-name">Sandhya Gore</span>
+  <a href="https://www.linkedin.com/in/sandhya-gore-96057a339/" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Pick & Place</span>
           </div>
           <div class="member-item">
             <img src="teamM_pics/vishu.jpeg" alt="Member" class="member-photo">
-            <p class="member-name">Vishwambhari Jadhav</p>
+<div class="name-row">
+  <span class="member-name">Vishwambhari Jadhav</span>
+  <a href="https://www.linkedin.com/in/YOUR_PROFILE" 
+     target="_blank" 
+     class="linkedin-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
             <span class="role-badge">Pick & Place</span>
           </div>
         </div>
