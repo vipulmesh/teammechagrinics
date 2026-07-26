@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,7 +60,7 @@
       display: flex;
       background: #ffffff;
       border-radius: 24px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
       overflow: hidden;
       max-width: 950px;
       border: 1px solid #e0e0e0;
@@ -81,7 +82,7 @@
     /* ===== Leadership Grid ===== */
     .leader-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr); 
+      grid-template-columns: repeat(5, 1fr);
       gap: 20px;
       margin-top: 40px;
     }
@@ -93,7 +94,7 @@
       text-align: center;
       transition: all 0.3s ease;
       border: 1px solid #eee;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     }
 
     .leader-card:hover {
@@ -123,19 +124,22 @@
     /* ===== UPDATED: WRAPPING MEMBER GRID ===== */
     .member-tray {
       display: flex;
-      flex-wrap: wrap; /* Allows cards to wrap to the next line */
-      justify-content: center; /* Centers cards in the row */
+      flex-wrap: wrap;
+      /* Allows cards to wrap to the next line */
+      justify-content: center;
+      /* Centers cards in the row */
       gap: 25px;
       padding: 20px 0;
     }
 
     .member-item {
-      flex: 0 1 200px; /* Non-slider width, fits 5-6 per row on desktop */
+      flex: 0 1 200px;
+      /* Non-slider width, fits 5-6 per row on desktop */
       background: white;
       border-radius: 20px;
       padding: 25px 15px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border: 1px solid #f0f0f0;
       transition: all 0.3s ease;
     }
@@ -143,7 +147,7 @@
     .member-item:hover {
       transform: translateY(-5px);
       border-color: var(--accent-green);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     }
 
     .member-photo {
@@ -165,55 +169,57 @@
 
     /* ===== Responsive Handling ===== */
     @media (max-width: 1100px) {
-      .leader-grid { grid-template-columns: repeat(3, 1fr); }
+      .leader-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
       .section-container {
         padding: 40px 15px;
       }
-      
+
       header.page-title h1 {
         font-size: 2rem;
       }
-      
-      .faculty-card { 
-        flex-direction: column; 
+
+      .faculty-card {
+        flex-direction: column;
         max-width: 100%;
       }
-      
-      .faculty-card img { 
-        width: 100%; 
-        height: 300px; 
+
+      .faculty-card img {
+        width: 100%;
+        height: 300px;
       }
-      
+
       .faculty-content {
         padding: 25px 20px;
       }
-      
-      .leader-grid { 
-        grid-template-columns: repeat(2, 1fr); 
+
+      .leader-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
       }
-      
+
       .leader-card {
         padding: 12px;
       }
-      
+
       .leader-card img {
         height: 200px;
       }
-      
-      .member-item { 
-        flex: 0 1 calc(50% - 12px); 
+
+      .member-item {
+        flex: 0 1 calc(50% - 12px);
         padding: 20px 12px;
       }
-      
+
       .member-photo {
         width: 120px;
         height: 120px;
       }
-      
+
       .member-name {
         font-size: 0.85rem;
       }
@@ -223,171 +229,186 @@
       .section-container {
         padding: 30px 10px;
       }
-      
+
       header.page-title {
         margin-bottom: 30px;
       }
-      
-      header.page-title h1 { 
-        font-size: 1.5rem; 
+
+      header.page-title h1 {
+        font-size: 1.5rem;
       }
-      
+
       .title-underline {
         width: 50px;
         height: 3px;
       }
-      
+
       .faculty-wrapper {
         margin-bottom: 40px;
       }
-      
+
       .faculty-card img {
         height: 250px;
       }
-      
+
       .faculty-content h2 {
         font-size: 1.5rem;
       }
-      
-      .leader-grid { 
-        grid-template-columns: 1fr; 
+
+      .leader-grid {
+        grid-template-columns: 1fr;
         gap: 15px;
       }
-      
+
       .leader-card img {
         height: 250px;
       }
-      
+
       .member-tray {
         gap: 15px;
       }
-      
-      .member-item { 
-        flex: 0 1 calc(50% - 7.5px); 
-        padding: 15px 10px; 
+
+      .member-item {
+        flex: 0 1 calc(50% - 7.5px);
+        padding: 15px 10px;
       }
-      
-      .member-photo { 
-        width: 100px; 
-        height: 100px; 
+
+      .member-photo {
+        width: 100px;
+        height: 100px;
       }
-      
+
       .member-name {
         font-size: 0.8rem;
       }
     }
 
     /* ===== Name + LinkedIn Wrapper ===== */
-.name-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
+    .name-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
-.name-row a.name-link {
-  font-weight: 700;
-  color: #1b5e20;
-  transition: color 0.2s ease;
-}
+    .name-row a.name-link {
+      font-weight: 700;
+      color: #1b5e20;
+      transition: color 0.2s ease;
+    }
 
-.name-row a.name-link:hover {
-  color: #2e7d32;
-}
+    .name-row a.name-link:hover {
+      color: #2e7d32;
+    }
 
-/* LinkedIn icon */
-.linkedin-btn {
-  width: 22px;
-  height: 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10%;
-  background: #0a66c2;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    /* LinkedIn icon */
+    .linkedin-btn {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10%;
+      background: #0a66c2;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-.linkedin-btn img {
-  width: 22px;
-  height: 22px;
-}
+    .linkedin-btn img {
+      width: 22px;
+      height: 22px;
+    }
 
-.linkedin-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(10, 102, 194, 0.3);
-}
+    .linkedin-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(10, 102, 194, 0.3);
+    }
 
-/* Mobile fine-tuning */
-@media (max-width: 480px) {
-  .linkedin-btn {
-    width: 20px;
-    height: 20px;
-  }
+    /* Mobile fine-tuning */
+    @media (max-width: 480px) {
+      .linkedin-btn {
+        width: 20px;
+        height: 20px;
+      }
 
-  .linkedin-btn img {
-    width: 11px;
-    height: 11px;
-  }
-}
-
+      .linkedin-btn img {
+        width: 11px;
+        height: 11px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
- <header class="bg-white/85 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    
-    <a href="index.html" class="flex items-center space-x-2">
-      <span class="text-2xl font-extrabold text-green-800 tracking-tight">
-        Team MechAgrinics
-      </span>
-    </a>
+  <header class="bg-white/85 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-    <nav class="hidden lg:flex items-center space-x-4">
-      <a href="index.html#hero" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">About Us</a>
-      <a href="teampg.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Our Team</a>
-      
-      <div class="relative group">
-        <a href="projects.html" class="text-stone-600 group-hover:text-green-700 px-3 py-2 font-medium flex items-center">
-          Projects <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
-        </a>
-        <div class="absolute hidden group-hover:block bg-white border border-stone-100 shadow-xl rounded-xl mt-1 w-64 overflow-hidden">
-          <a href="prj1.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Multi-Vegetable Transplanter 🌱</a>
-          <a href="prj2.html" class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Onion Harvester (Soon)</a>
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="text-2xl font-extrabold text-green-800 tracking-tight">
+          Team MechAgrinics
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-4">
+        <a href="index.html#hero"
+          class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">About Us</a>
+        <a href="teampg.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Our
+          Team</a>
+
+        <div class="relative group">
+          <a href="projects.html"
+            class="text-stone-600 group-hover:text-green-700 px-3 py-2 font-medium flex items-center">
+            Projects <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div
+            class="absolute hidden group-hover:block bg-white border border-stone-100 shadow-xl rounded-xl mt-1 w-64 overflow-hidden">
+            <a href="prj1.html"
+              class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Multi-Vegetable
+              Transplanter 🌱</a>
+            <a href="prj2.html"
+              class="block px-4 py-3 text-sm text-stone-600 hover:bg-green-50 hover:text-green-700">Onion Harvester
+              (Soon)</a>
+          </div>
         </div>
-      </div>
 
-      <a href="achievements.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Achievements</a>
-      <a href="alumni.html" class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Alumni</a>
-      
-      <a href="contact.html" class="ml-2 bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg">
+        <a href="achievements.html"
+          class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Achievements</a>
+        <a href="alumni.html"
+          class="text-stone-600 hover:text-green-700 px-3 py-2 font-medium transition-colors">Alumni</a>
+
+        <a href="contact.html"
+          class="ml-2 bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg">
+          Get In Touch
+        </a>
+      </nav>
+
+      <button id="mobile-menu-button" class="lg:hidden text-stone-600 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-6 py-6 space-y-4 shadow-2xl">
+      <a href="index.html#hero" class="block text-stone-600 font-medium text-lg">About Us</a>
+      <a href="teampg.html" class="block text-stone-600 font-medium text-lg">Our Team</a>
+      <a href="projects.html"
+        class="block text-stone-600 font-medium text-lg border-l-4 border-green-600 pl-3">Projects</a>
+      <div class="pl-6 space-y-2">
+        <a href="prj1.html" class="block text-stone-500 text-sm italic">Multi-Vegetable Transplanter</a>
+        <a href="prj2.html" class="block text-stone-500 text-sm italic">Onion Harvester</a>
+      </div>
+      <a href="achievements.html" class="block text-stone-600 font-medium text-lg">Achievements</a>
+      <a href="alumni.html" class="block text-stone-600 font-medium text-lg">Alumni</a>
+      <a href="contact.html" class="block bg-green-700 text-white text-center px-5 py-3 rounded-xl font-bold">
         Get In Touch
       </a>
-    </nav>
-
-    <button id="mobile-menu-button" class="lg:hidden text-stone-600 focus:outline-none">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-  </div>
-
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-6 py-6 space-y-4 shadow-2xl">
-    <a href="index.html#hero" class="block text-stone-600 font-medium text-lg">About Us</a>
-    <a href="teampg.html" class="block text-stone-600 font-medium text-lg">Our Team</a>
-    <a href="projects.html" class="block text-stone-600 font-medium text-lg border-l-4 border-green-600 pl-3">Projects</a>
-    <div class="pl-6 space-y-2">
-      <a href="prj1.html" class="block text-stone-500 text-sm italic">Multi-Vegetable Transplanter</a>
-      <a href="prj2.html" class="block text-stone-500 text-sm italic">Onion Harvester</a>
     </div>
-    <a href="achievements.html" class="block text-stone-600 font-medium text-lg">Achievements</a>
-    <a href="alumni.html" class="block text-stone-600 font-medium text-lg">Alumni</a>
-    <a href="contact.html" class="block bg-green-700 text-white text-center px-5 py-3 rounded-xl font-bold">
-      Get In Touch
-    </a>
-  </div>
-</header>
+  </header>
 
   <section class="section-container">
     <header class="page-title">
@@ -399,13 +420,14 @@
       <div class="faculty-card">
         <img src="sundgesir.jpg" alt="Faculty Coordinator">
         <div class="faculty-content">
-          <span class="role-badge" style="background: #e8f5e9; color: #2e7d32; width: fit-content;">Faculty Coordinator</span>
-<div class="name-row mb-2" style="justify-content: flex-start;">
-  <span class="text-3xl font-bold text-gray-800">
-    Prof. Dr. R.S. Sungde
-  </span>
+          <span class="role-badge" style="background: #e8f5e9; color: #2e7d32; width: fit-content;">Faculty
+            Coordinator</span>
+          <div class="name-row mb-2" style="justify-content: flex-start;">
+            <span class="text-3xl font-bold text-gray-800">
+              Prof. Dr. R.S. Sungde
+            </span>
 
-</div>
+          </div>
           <p class="text-gray-600 leading-relaxed mb-4 text-lg">
             Guiding the team through technical hurdles and strategic planning to foster agricultural innovation.
           </p>
@@ -423,115 +445,92 @@
 
     <div class="leader-grid">
       <div class="leader-card">
-        <img src="sujal_up.jpeg" alt="Sujal">
+        <img src="teamM_pics/Nayan.jpg" alt="Sujal">
         <span class="role-badge">Captain</span>
-       <div class="name-row">
-  <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/" 
-     target="_blank" 
-     class="name-link text-lg">
-    Sujal Kothimbire
-  </a>
-  <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/" 
- target="_blank"
-   class="linkedin-btn"
-   aria-label="LinkedIn">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
-  </svg>
-  </a>
-</div>
-  
-      </div>
-
-      <div class="leader-card">
-        <img src="teamM_pics/ds_up.jpeg" alt="Dhananjay">
-        <span class="role-badge">Vice-Captain</span>
-       <div class="name-row">
-  <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/" 
-     target="_blank" 
-     class="name-link text-lg">
-    Dhananjay Shinde
-  </a>
-  <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/" 
- target="_blank"
-   class="linkedin-btn"
-   aria-label="LinkedIn">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
-  </svg>
-  </a>
-</div>
-
-      </div>
-
-      <div class="leader-card">
-        <img src="anil1.jpg" alt="Anil">
-        <span class="role-badge">Technical Head</span>
-       <div class="name-row">
-  <a href="https://www.linkedin.com/in/anildhadge03/" 
-     target="_blank" 
-     class="name-link text-lg">
-    Anil Dhadge
-  </a>
-  <a href="https://www.linkedin.com/in/anildhadge03/" 
- target="_blank"
-   class="linkedin-btn"
-   aria-label="LinkedIn">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
-  </svg>
-  </a>
-</div>
- 
-      </div>
-
-      <div class="leader-card">
-        <img src="gaurav1.jpg" alt="Gaurav">
-        <span class="role-badge">Finance Head</span>
-       <div class="name-row">
-  <a href="https://www.linkedin.com/in/gaurav-kotkar-30137231b/" 
-     target="_blank" 
-     class="name-link text-lg">
-    Gaurav Kotkar
-  </a>
-  <a href="https://www.linkedin.com/in/gaurav-kotkar-30137231b/" 
- target="_blank"
-   class="linkedin-btn"
-   aria-label="LinkedIn">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
-  </svg>
-  </a>
-</div>
-
-      </div>
-
-      <div class="leader-card">
-        <img src="tejas.jpg" alt="Tejas">
-        <span class="role-badge">Manufacturing Head</span>
         <div class="name-row">
-  <a href="https://www.linkedin.com/in/tejas-muluk-8281452b2/" 
-     target="_blank" 
-     class="name-link text-lg">
-    Tejas Muluk
-  </a>
-  <a href="https://www.linkedin.com/in/tejas-muluk-8281452b2/" 
-   target="_blank"
-   class="linkedin-btn"
-   aria-label="LinkedIn">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z"/>
-  </svg>
-</a>
-
-</div>
+          <a href="https://www.linkedin.com/in/nayan-wagh-42535a3a8/" target="_blank" class="name-link text-lg">
+            Nayan Wagh
+          </a>
+          <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/" target="_blank" class="linkedin-btn"
+            aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z" />
+            </svg>
+          </a>
+        </div>
 
       </div>
+
+      <div class="leader-card">
+        <img src="teamM_pics/Siddharth.png" alt="Siddharth">
+        <span class="role-badge">Vice-Captain</span>
+        <div class="name-row">
+          <a href="https://www.linkedin.com/in/siddharth-patare-22b213420/" target="_blank" class="name-link text-lg">
+            Siddharth Patare
+          </a>
+          <a href="https://www.linkedin.com/in/siddharth-patare-22b213420/" target="_blank" class="linkedin-btn"
+            aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="leader-card">
+        <img src="teamM_pics/Rushikesh.png" alt="Rushikesh">
+        <span class="role-badge">Technical Head</span>
+        <div class="name-row">
+          <a href="https://www.linkedin.com/in/rushikesh-mane-507b08337/" target="_blank" class="name-link text-lg">
+            Rushikesh Mane
+          </a>
+          <a href="https://www.linkedin.com/in/rushikesh-mane-507b08337/" target="_blank" class="linkedin-btn"
+            aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="leader-card">
+        <img src="teamM_pics/Gourav.jpg" alt="gourav">
+        <span class="role-badge">Design Head</span>
+        <div class="name-row">
+          <a href="https://www.linkedin.com/in/#/" target="_blank" class="name-link text-lg">
+            Gourav Bhosale
+          </a>
+          <a href="https://www.linkedin.com/in/#/" target="_blank" class="linkedin-btn" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+      <div class="leader-card">
+        <img src="teamM_pics/vishu.jpeg" alt="Vishwambhari">
+        <span class="role-badge">Finance Head</span>
+        <div class="name-row">
+          <a href="https://www.linkedin.com/in/#/" target="_blank" class="name-link text-lg">
+           Vishwambhari Jadhav
+          </a>
+          <a href="https://www.linkedin.com/in/#/" target="_blank" class="linkedin-btn" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0.5 8H4.5V24H0.5V8ZM8.5 8H12.3V10.2H12.35C12.88 9.2 14.18 8.1 16.08 8.1C20.1 8.1 20.8 10.7 20.8 14.1V24H16.8V14.9C16.8 12.7 16.8 10.9 14.4 10.9C11.96 10.9 11.6 12.7 11.6 14.8V24H7.6V8H8.5Z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -542,409 +541,153 @@
         <div class="title-underline"></div>
       </header>
       <div class="mb-12">
+
         <div class="member-tray">
           <div class="member-item">
-<img src="Vaibhav Gaikwad.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Vaibhav Gaikwad</span>
-  <a href="https://www.linkedin.com/in/vaibhav-gaikwad-4b710530a/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-
-            <span class="role-badge">Peer Advisor</span>
+            <img src="/teamM_pics/VIPUL.JPG" alt="Member" class="member-photo">
+            <div class="name-row">
+              <span class="member-name">Vipul Meshram</span>
+              <a href="https://www.linkedin.com/in/vipul-meshram-83645732a/" target="_blank" class="linkedin-btn">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+              </a>
+            </div>
+            <span class="role-badge">Website Development</span>
           </div>
           <div class="member-item">
-            <img src="Kalpesh Dhongde.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Kalpesh Dhongde</span>
-  <a href="https://www.linkedin.com/in/kalpesh-dhongde-2a0938259/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-<span class="role-badge">Peer Advisor</span>
-          </div>
-          <div class="member-item">
-            <img src="Prajakta Pednekar.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Prajakta Pednekar</span>
-  <a href="https://www.linkedin.com/in/prajakta-pednekar-070a3a259/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Peer Advisor</span>
-          </div>
-          <div class="member-item">
-            <img src="Shivgonda Patil.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Shivgonda Patil</span>
-  <a href="https://www.linkedin.com/in/shivgonda-patil-6b28a3258/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Peer Advisor</span>
-          </div>
-          
-          <div class="member-item">
-            <img src="Devashri Daud.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Devashri Daud</span>
-  <a href="https://www.linkedin.com/in/devashri-daud-8b28a325b/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
+            <img src="sujal_up.jpeg" alt="Member" class="member-photo">
+            <div class="name-row">
+              <span class="member-name">Sujal Kothimbire </span>
+              <a href="https://www.linkedin.com/in/sujal-kothimbire-7223a8295/" target="_blank" class="linkedin-btn">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+              </a>
+            </div>
             <span class="role-badge">Peer Advisor</span>
           </div>
 
-<div class="member-item">
-<img src="priyanka.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Priyanka Ravate</span>
-  <a href="https://www.linkedin.com/in/priyanka-ravate-0114852b7/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-
-            <span class="role-badge">Peer Advisor</span>
-          </div>
 
           <div class="member-item">
-<img src="sai.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Sai Bhamare</span>
-  <a href="https://www.linkedin.com/in/sai-bhamare-8b3894300/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-
-            <span class="role-badge">Peer Advisor</span>
+            <img src="/teamM_pics/ds_up.jpeg" alt="Member" class="member-photo">
+            <div class="name-row">
+              <span class="member-name">Dhananjay Shinde </span>
+              <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/" target="_blank" class="linkedin-btn">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+              </a>
+            </div>
+            <span class="role-badge">Pick & Place</span>
           </div>
-
-          <div class="member-item">
-<img src="dnyaneshwari.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Dnyaneshwari Thombare</span>
-  <a href="https://www.linkedin.com/in/dnyaneshwari-thombare-0598482b4/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-
-            <span class="role-badge">Peer Advisor</span>
-          </div>
-
-          <div class="member-item">
-<img src="netra.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Netra Rathod</span>
-  <a href="https://www.linkedin.com/in/netra-rathod-99a4882b7/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-
-            <span class="role-badge">Peer Advisor</span>
-          </div>
-
           <div class="member-item">
             <img src="dev.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Dev Upate</span>
-  <a href="https://www.linkedin.com/in/dev-upate-84b46a289/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-    <span class="role-badge">Digging</span>
+            <div class="name-row">
+              <span class="member-name">Dev Upate</span>
+              <a href="https://www.linkedin.com/in/dhananjay-shinde-0224862b7/" target="_blank" class="linkedin-btn">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+              </a>
+            </div>
+            <span class="role-badge">Peer Advisor</span>
           </div>
-          
-          <div class="member-item">
-            <img src="/teamM_pics/VIPUL.JPG" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Vipul Meshram</span>
-  <a href="https://www.linkedin.com/in/vipul-meshram-83645732a/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Development</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Siddharth.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Siddharth Patare</span>
-  <a href="https://www.linkedin.com/in/YOUR_PROFILE" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Pick & Place</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/hardik.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Hardik Gorde</span>
-  <a href="https://www.linkedin.com/in/hardik-gorde-6648a6321/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Conveyer</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Rushikesh.png" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Rushikesh Mane</span>
-  <a href="https://www.linkedin.com/in/rushikesh-mane-507b08337/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Conveyer</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Gourav.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Gourav Bhosale</span>
-  <a href="https://www.linkedin.com/in/YOUR_PROFILE" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Digging</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Krushna.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Krushna Yede</span>
-  <a href="https://www.linkedin.com/in/krushna-yede-558ba435b/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Conveyer</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Nayan.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Nayan Wagh</span>
-  <a href="https://www.linkedin.com/in/nayan-wagh-42535a3a8/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Digging</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Pranali Salunkhe.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Pranali Salunkhe</span>
-  <a href="" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Digging</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Aarya.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Aarya Wagh</span>
-  <a href="https://www.linkedin.com/in/aarya-wagh-11a3a9328/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Transmission</span>
-          </div>
-          <div class="member-item">
-            <img src="/teamM_pics/Pragati.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Pragati Ritpure</span>
-  <a href="https://www.linkedin.com/in/pragati-ritpure-41745a33a/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Transmission</span>
-          </div>
-          <div class="member-item">
-            <img src="teamM_pics/Atharv.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Atharv Sonawane (CSE)</span>
-  <a href="https://www.linkedin.com/in/atharv-sonawane-9587a331b/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Development</span>
-          </div>
-          <div class="member-item">
-            <img src="teamM_pics/rohan_up.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Rohan Ladkat</span>
-  <a href="https://www.linkedin.com/in/rohan-ladkat-054144339/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Transmission</span>
-          </div>
-          <div class="member-item">
-            <img src="teamM_pics/Sandhya_.jpg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Sandhya Gore</span>
-  <a href="https://www.linkedin.com/in/sandhya-gore-96057a339/" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Pick & Place</span>
-          </div>
-          <div class="member-item">
-            <img src="teamM_pics/vishu.jpeg" alt="Member" class="member-photo">
-<div class="name-row">
-  <span class="member-name">Vishwambhari Jadhav</span>
-  <a href="https://www.linkedin.com/in/YOUR_PROFILE" 
-     target="_blank" 
-     class="linkedin-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-            <span class="role-badge">Pick & Place</span>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </section>
 
-<footer id="contact" class="bg-green-900 text-stone-200 pt-16 pb-8 mt-20">
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-      
-      <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-xl font-bold text-white mb-2">Team MechAgrinics</h3>
-        <p class="text-stone-400 text-sm mb-6">Revolutionizing Agriculture Through Technology</p>
-        
-        <div class="rounded-lg overflow-hidden shadow-2xl w-full max-w-xs border border-green-800">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.442935277879!2d73.7438459751936!3d18.60032958252294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb9f2343e06d%3A0x6400f9a2e6b5a351!2sJSPM's%20Rajarshi%20Shahu%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000" 
-            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
+  <footer id="contact" class="bg-green-900 text-stone-200 pt-16 pb-8 mt-20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-xl font-bold text-white mb-2">Team MechAgrinics</h3>
+          <p class="text-stone-400 text-sm mb-6">Revolutionizing Agriculture Through Technology</p>
+
+          <div class="rounded-lg overflow-hidden shadow-2xl w-full max-w-xs border border-green-800">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.442935277879!2d73.7438459751936!3d18.60032958252294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb9f2343e06d%3A0x6400f9a2e6b5a351!2sJSPM's%20Rajarshi%20Shahu%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000"
+              width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-6">Get In Touch</h3>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-center justify-center md:justify-start">
+              <span class="text-yellow-500 mr-2">✉</span>
+              <a href="mailto:teammechagrinics2027@gmail.com"
+                class="hover:text-white transition-colors">teammechagrinics2027@gmail.com</a>
+            </li>
+            <li>
+              <p class="font-medium text-stone-100">Captain -Nayan Wagh</p>
+              <p class="text-stone-400">+91 95799 43615</p>
+            </li>
+            <li>
+              <p class="font-medium text-stone-100">Vice-Captain - Siddharth Patare</p>
+              <p class="text-stone-400">+91 70587 77276</p>
+            </li>
+            <li class="pt-2">
+              <p class="text-xs uppercase tracking-widest text-stone-500 font-bold">Location</p>
+              <p class="text-stone-400">Mechanical Engineering Dept (D-Building),<br>JSPM's RSCOE, Tathawade, Pune-33
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-xl font-semibold text-white mb-6">Follow Our Journey</h3>
+          <div class="flex space-x-4 mb-8">
+            <a href="https://www.linkedin.com/company/rscoe-team-mechagrinics/" target="_blank"
+              class="hover:scale-110 transition-transform">
+              <img src="https://img.icons8.com/color/48/linkedin.png" class="w-10 h-10" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/team_mechagrinics" target="_blank"
+              class="hover:scale-110 transition-transform">
+              <img src="https://img.icons8.com/color/48/instagram-new.png" class="w-10 h-10" alt="Instagram" />
+            </a>
+          </div>
+          <div class="text-xs font-bold tracking-[0.2em] text-yellow-600 uppercase border-l-2 border-yellow-600 pl-4">
+            Fervency • Liberty • Synergy
+          </div>
         </div>
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold text-white mb-6">Get In Touch</h3>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-center justify-center md:justify-start">
-            <span class="text-yellow-500 mr-2">✉</span> 
-            <a href="mailto:teammechagrinics2026@gmail.com" class="hover:text-white transition-colors">teammechagrinics2026@gmail.com</a>
-          </li>
-          <li>
-            <p class="font-medium text-stone-100">Captain - Sujal Kothimbire</p>
-            <p class="text-stone-400">+91 90752 91126</p>
-          </li>
-          <li>
-            <p class="font-medium text-stone-100">Vice-Captain - Dhananjay Shinde</p>
-            <p class="text-stone-400">+91 84858 67357</p>
-          </li>
-          <li class="pt-2">
-            <p class="text-xs uppercase tracking-widest text-stone-500 font-bold">Location</p>
-            <p class="text-stone-400">Mechanical Engineering Dept (D-Building),<br>JSPM's RSCOE, Tathawade, Pune-33</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-xl font-semibold text-white mb-6">Follow Our Journey</h3>
-        <div class="flex space-x-4 mb-8">
-          <a href="https://www.linkedin.com/company/rscoe-team-mechagrinics/" target="_blank" class="hover:scale-110 transition-transform">
-            <img src="https://img.icons8.com/color/48/linkedin.png" class="w-10 h-10" alt="LinkedIn" />
-          </a>
-          <a href="https://www.instagram.com/team_mechagrinics" target="_blank" class="hover:scale-110 transition-transform">
-            <img src="https://img.icons8.com/color/48/instagram-new.png" class="w-10 h-10" alt="Instagram" />
-          </a>
-        </div>
-        <div class="text-xs font-bold tracking-[0.2em] text-yellow-600 uppercase border-l-2 border-yellow-600 pl-4">
-          Fervency • Liberty • Synergy
-        </div>
+      <div class="mt-16 pt-8 border-t border-green-800 text-center">
+        <p class="text-stone-500 text-sm">
+          © <span id="current-year"></span> Team MechAgrinics RSCOE. All Rights Reserved.
+        </p>
       </div>
     </div>
+  </footer>
 
-    <div class="mt-16 pt-8 border-t border-green-800 text-center">
-      <p class="text-stone-500 text-sm">
-        © <span id="current-year"></span> Team MechAgrinics RSCOE. All Rights Reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle Logic
+      const menuBtn = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle Logic
-    const menuBtn = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        mobileMenu.classList.toggle('hidden');
-      });
-      
-      // Close menu when clicking a link
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          mobileMenu.classList.toggle('hidden');
         });
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-          mobileMenu.classList.add('hidden');
-        }
-      });
-    }
 
-    // Set Dynamic Copyright Year
-    const yearSpan = document.getElementById('current-year');
-    if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
-  });
-</script>
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      }
+
+      // Set Dynamic Copyright Year
+      const yearSpan = document.getElementById('current-year');
+      if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
+    });
+  </script>
 
 </body>
 
 </html>
-
